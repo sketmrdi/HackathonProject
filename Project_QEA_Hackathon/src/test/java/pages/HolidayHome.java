@@ -369,7 +369,7 @@ public void clickApply() throws Exception{								//Clicking on apply
 
 public void travellerRating() throws Exception 							//Selecting Sort By option
 	{
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		driver.findElement(By.xpath(prop.getProperty("options"))).click();		
 		
 		Thread.sleep(1000);
