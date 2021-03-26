@@ -9,7 +9,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -108,8 +107,7 @@ public class Base {
 		}
 		
 		// Maximize window
-		Dimension d = new Dimension(1382,744);
-		driver.manage().window().setSize(d);
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);//Invoking implicit wait
 		return driver;
 	}
