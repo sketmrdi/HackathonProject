@@ -1,0 +1,156 @@
+
+//DriverSetup
+
+browser = chrome
+
+URL = https://www.tripadvisor.in/
+
+
+
+//SelectCity
+
+inputField = //input[@placeholder='Where to?']
+
+result = //div[@class='result-title']/span[text()='Nairobi']
+
+point = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[3]/div/div[1]/div/div[2]/div/div/div/div/div/div/div[2]/div[1]
+
+//holidayHome = //a[@title='Holiday Homes']
+
+holidayHome = //*[@id="lithium-root"]/main/div[2]/div/div/div[2]/a
+
+
+//inDate
+
+checkIn = //div[@class='lRYY2wxe']//div[text()='Check-in']
+
+
+//selectDateCheckInAndOut
+
+monthCatcher = //div[@class='_2gw3JEPK']
+
+dayCatcher = //div[@class='_3ULdV0X_ ']
+
+arrowRight = //div[@data-testid='nav_next']
+
+
+
+//GuestFunction
+
+guest = //div[text()='Guests']
+
+plusIcon = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[14]/div/div/div[2]/div/div[2]/div/div[2]/span[2]/span
+
+minusIcon = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[14]/div/div/div[2]/div/div[2]/div/div[2]/span[1]/span
+
+apply = //button[text()='Apply']
+
+
+//Extras
+
+options = //*[@id="component_2"]/div/div[3]/div/div[1]/div[2]/div[1]/div[2]/div/div/div/div[1]
+
+rating = //span[text()='Traveller Rating']
+
+showMore = //*[@id="component_2"]/div/div[3]/div/div[1]/div[1]/div[1]/div/div/div[12]/div[6]/span[1]
+
+elev = //span[@class='_1TxySsqs']/div[contains(text(),'Elevator')]
+
+
+//Output
+
+//listOfHotels = //div[@class='_2eG0wTfl']/a
+listOfHotels = //div[@class='_2eG0wTfl']/h2/a
+
+listOfPricePerNight = //div[@class='_33TIi_t4']
+
+listOfTotalPrice = //div[@class='_3f9mHAKH']
+
+//negOne
+url= https://www.tripadvisor.in/Rentals
+
+findHolidayRentals= //*[@id="SUBMIT_VACATION_RENTALS"]/span[2]
+
+colour=//*[@id="taplc_trip_search_home_vacation_rentals_0"]/div[2]/div[1]/div/span/span
+
+//negTwo
+      
+city=//*[@id="taplc_trip_search_home_vacation_rentals_0"]/div[2]/div[1]/div/span/input
+       
+errorMsg=//*[@id=\"BODY_BLOCK_JQUERY_REFLOW\"]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[3]/div/div/div[1]/span
+
+//negThree
+
+cal=//*[@id="taplc_trip_search_home_vacation_rentals_0"]/div[2]/div[2]/div/span[1]/span[2]/span
+
+date1=//*[@id="BODY_BLOCK_JQUERY_REFLOW"]/span/div[3]/div/div[2]/div[3]/span[1]/span[18]
+  
+date2=//*[@id="BODY_BLOCK_JQUERY_REFLOW"]/span/div[3]/div/div[2]/div[3]/span[1]/span[13]
+
+calenderDisp=//*[@id="BODY_BLOCK_JQUERY_REFLOW"]/span/div[3]/div/div[2]
+
+//CruiseFunctionality
+
+cruiseOption = //*[@id="component_1"]/nav/div/div/div[1]/a[9]/span
+
+
+//dropMenu1 = cruise_line_dropdown
+dropMenu1 = //span[contains(text(),'Cruise line')]
+
+
+//option1= //div[@class='CfqcQ1jD option' and contains(text(),'Norwegian')]
+option1= //span[contains(text(),'Norwegian Cruise Line')]
+
+//dropMenu2 =//*[@id="component_1"]/div/div[3]/div/div[2]/div/div/div[3]
+dropMenu2 = //span[contains(text(),'Norwegian Bliss')]
+
+//option2= //div[contains(text(),'Epic')]
+option2= //span[contains(text(),'Norwegian Epic')]
+
+search = //button[contains(text(),'Search')]
+
+
+
+//getDetails
+
+details1 =//*[@id="ship_overview"]/div/div/div/div[1]/div[1]/div[2]/div[1]
+
+details2 = //*[@id="ship_overview"]/div/div/div/div[1]/div[1]/div[2]/div[4]
+
+lang = //label[@class='bUKZfPPw']
+
+
+
+//Months 
+
+Jan = January
+Feb = February
+Mar = March
+Apr = April
+May = May
+Jun = June
+June = June
+Jul = July
+July = July
+Aug = August
+Sep = September
+Sept = September
+Oct = October
+Nov = November
+Dec = December
+
+
+//MonthNumber
+
+January = 1
+February = 2
+March = 3
+April = 4
+May = 5
+June = 6
+July = 7
+August = 8
+September = 9
+October = 10
+November = 11
+December = 12

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke_Suite">
+	<!-- Suite -->
+	<test name="Smoke_Test" preserve-order="true" thread-count="5">
+		<classes>
+			<class name="Tests.Test_HolidayHome_Functionality" />
+			<class name="Tests.Test_Cruise_Functionality" />
+		</classes>
+	</test>
+	<!-- Test -->
+</suite>

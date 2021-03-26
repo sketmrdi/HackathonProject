@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-03-24T18:13:57 IST" name="Regression_Suite" finished-at="2021-03-24T18:14:22 IST" duration-ms="24713">
+    <groups>
+    </groups>
+    <test started-at="2021-03-24T18:13:57 IST" name="Regresion_Test" finished-at="2021-03-24T18:14:22 IST" duration-ms="24713">
+      <class name="Tests.Test_InvalidHolidayHomes_Functionality">
+        <test-method is-config="true" signature="startTest()[pri:0, instance:Tests.Test_InvalidHolidayHomes_Functionality@484970b0]" started-at="2021-03-24T18:13:47 IST" name="startTest" finished-at="2021-03-24T18:13:57 IST" duration-ms="10840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startTest -->
+        <test-method is-config="true" signature="TC_InitiateInvalidHolidayHomes()[pri:0, instance:Tests.Test_InvalidHolidayHomes_Functionality@484970b0]" started-at="2021-03-24T18:13:57 IST" name="TC_InitiateInvalidHolidayHomes" finished-at="2021-03-24T18:13:57 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_InitiateInvalidHolidayHomes -->
+        <test-method signature="TC_Negative1()[pri:18, instance:Tests.Test_InvalidHolidayHomes_Functionality@484970b0]" started-at="2021-03-24T18:13:57 IST" name="TC_Negative1" finished-at="2021-03-24T18:14:11 IST" duration-ms="13354" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Negative1 -->
+        <test-method signature="TC_Negative2()[pri:19, instance:Tests.Test_InvalidHolidayHomes_Functionality@484970b0]" started-at="2021-03-24T18:14:11 IST" name="TC_Negative2" finished-at="2021-03-24T18:14:16 IST" duration-ms="5348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Negative2 -->
+        <test-method signature="TC_Negative3()[pri:20, instance:Tests.Test_InvalidHolidayHomes_Functionality@484970b0]" started-at="2021-03-24T18:14:16 IST" name="TC_Negative3" finished-at="2021-03-24T18:14:22 IST" duration-ms="5930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_Negative3 -->
+        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:Tests.Test_InvalidHolidayHomes_Functionality@484970b0]" started-at="2021-03-24T18:14:22 IST" name="exitBrowser" finished-at="2021-03-24T18:14:23 IST" duration-ms="1214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exitBrowser -->
+      </class> <!-- Tests.Test_InvalidHolidayHomes_Functionality -->
+    </test> <!-- Regresion_Test -->
+  </suite> <!-- Regression_Suite -->
+</testng-results>
