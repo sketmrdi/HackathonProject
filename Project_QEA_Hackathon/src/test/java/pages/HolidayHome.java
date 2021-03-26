@@ -476,7 +476,7 @@ public void NegThree(String str1) throws Exception {
 	wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("date2"))));
 	
 	driver.findElement(By.xpath(prop.getProperty("date2"))).click();   //Selecting a check-out date less than check-in date
-	Thread.sleep(1000);
+	Thread.sleep(2000);
 	if (driver.findElement(By.xpath(prop.getProperty("calenderDisp"))).isDisplayed())//Checking if check-out date is less than check-in date
 		System.out.println("Enter valid Check out date");
 
