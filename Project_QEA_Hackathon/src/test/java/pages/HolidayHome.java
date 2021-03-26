@@ -6,9 +6,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -371,11 +369,8 @@ public void clickApply() throws Exception{								//Clicking on apply
 
 public void travellerRating() throws Exception 							//Selecting Sort By option
 	{
-		Thread.sleep(2000);
-		//driver.findElement(By.xpath(prop.getProperty("options"))).click();
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("scroll(0, 250)");
-		driver.findElement(By.xpath(prop.getProperty("options"))).click();
+		Thread.sleep(1000);
+		driver.findElement(By.xpath(prop.getProperty("options"))).click();		
 		
 		Thread.sleep(1000);
 		driver.findElement(By.xpath(prop.getProperty("rating"))).click();	//Selecting Traveller  rating option
@@ -481,7 +476,7 @@ public void NegThree(String str1) throws Exception {
 	wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("date2"))));
 	
 	driver.findElement(By.xpath(prop.getProperty("date2"))).click();   //Selecting a check-out date less than check-in date
-	Thread.sleep(2000);
+	Thread.sleep(1000);
 	if (driver.findElement(By.xpath(prop.getProperty("calenderDisp"))).isDisplayed())//Checking if check-out date is less than check-in date
 		System.out.println("Enter valid Check out date");
 

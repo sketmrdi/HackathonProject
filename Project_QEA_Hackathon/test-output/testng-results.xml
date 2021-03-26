@@ -2,94 +2,94 @@
 <testng-results ignored="2" total="19" passed="17" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-26T21:50:22 IST" name="Smoke_Suite" finished-at="2021-03-26T21:51:44 IST" duration-ms="82146">
+  <suite started-at="2021-03-26T22:20:48 IST" name="Smoke_Suite" finished-at="2021-03-26T22:21:57 IST" duration-ms="68777">
     <groups>
     </groups>
-    <test started-at="2021-03-26T21:50:22 IST" name="Smoke_Test" finished-at="2021-03-26T21:51:44 IST" duration-ms="82146">
+    <test started-at="2021-03-26T22:20:48 IST" name="Smoke_Test" finished-at="2021-03-26T22:21:57 IST" duration-ms="68777">
       <class name="Tests.Test_Cruise_Functionality">
-        <test-method is-config="true" signature="TC_InitiateCruise()[pri:0, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T21:50:22 IST" name="TC_InitiateCruise" finished-at="2021-03-26T21:50:22 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="TC_InitiateCruise()[pri:0, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T22:20:48 IST" name="TC_InitiateCruise" finished-at="2021-03-26T22:20:48 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_InitiateCruise -->
-        <test-method signature="TC_ClickCruise()[pri:13, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T21:51:23 IST" name="TC_ClickCruise" finished-at="2021-03-26T21:51:30 IST" duration-ms="7125" status="PASS">
+        <test-method signature="TC_ClickCruise()[pri:13, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T22:21:42 IST" name="TC_ClickCruise" finished-at="2021-03-26T22:21:47 IST" duration-ms="4924" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_ClickCruise -->
-        <test-method signature="TC_CruiseType()[pri:14, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T21:51:30 IST" name="TC_CruiseType" finished-at="2021-03-26T21:51:33 IST" duration-ms="3443" status="PASS">
+        <test-method signature="TC_CruiseType()[pri:14, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T22:21:47 IST" name="TC_CruiseType" finished-at="2021-03-26T22:21:50 IST" duration-ms="2807" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_CruiseType -->
-        <test-method signature="TC_SelectCruiseVar()[pri:15, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T21:51:33 IST" name="TC_SelectCruiseVar" finished-at="2021-03-26T21:51:37 IST" duration-ms="3326" status="PASS">
+        <test-method signature="TC_SelectCruiseVar()[pri:15, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T22:21:50 IST" name="TC_SelectCruiseVar" finished-at="2021-03-26T22:21:53 IST" duration-ms="2765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_SelectCruiseVar -->
-        <test-method signature="TC_ClickSub()[pri:16, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T21:51:37 IST" name="TC_ClickSub" finished-at="2021-03-26T21:51:37 IST" duration-ms="853" status="PASS">
+        <test-method signature="TC_ClickSub()[pri:16, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T22:21:53 IST" name="TC_ClickSub" finished-at="2021-03-26T22:21:54 IST" duration-ms="768" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_ClickSub -->
-        <test-method signature="TC_GetDetails()[pri:17, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T21:51:37 IST" name="TC_GetDetails" finished-at="2021-03-26T21:51:44 IST" duration-ms="6352" status="PASS">
+        <test-method signature="TC_GetDetails()[pri:17, instance:Tests.Test_Cruise_Functionality@36b4fe2a]" started-at="2021-03-26T22:21:54 IST" name="TC_GetDetails" finished-at="2021-03-26T22:21:57 IST" duration-ms="3371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_GetDetails -->
       </class> <!-- Tests.Test_Cruise_Functionality -->
       <class name="Tests.Test_HolidayHome_Functionality">
-        <test-method is-config="true" signature="startTest()[pri:0, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:49:58 IST" name="startTest" finished-at="2021-03-26T21:50:22 IST" duration-ms="23700" status="PASS">
+        <test-method is-config="true" signature="startTest()[pri:0, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:20:39 IST" name="startTest" finished-at="2021-03-26T22:20:48 IST" duration-ms="9610" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTest -->
-        <test-method is-config="true" signature="TC_InitiateHolidayHomes()[pri:0, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:50:22 IST" name="TC_InitiateHolidayHomes" finished-at="2021-03-26T21:50:22 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="TC_InitiateHolidayHomes()[pri:0, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:20:48 IST" name="TC_InitiateHolidayHomes" finished-at="2021-03-26T22:20:48 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_InitiateHolidayHomes -->
-        <test-method signature="TC_EnterCity()[pri:1, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:50:22 IST" name="TC_EnterCity" finished-at="2021-03-26T21:50:26 IST" duration-ms="4168" status="PASS">
+        <test-method signature="TC_EnterCity()[pri:1, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:20:48 IST" name="TC_EnterCity" finished-at="2021-03-26T22:20:51 IST" duration-ms="2803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_EnterCity -->
-        <test-method signature="TC_VerifyCity()[pri:2, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:50:26 IST" name="TC_VerifyCity" finished-at="2021-03-26T21:50:31 IST" duration-ms="4984" status="PASS">
+        <test-method signature="TC_VerifyCity()[pri:2, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:20:51 IST" name="TC_VerifyCity" finished-at="2021-03-26T22:20:55 IST" duration-ms="3569" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_VerifyCity -->
-        <test-method signature="TC_SelectCity()[pri:3, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:50:31 IST" name="TC_SelectCity" finished-at="2021-03-26T21:50:33 IST" duration-ms="1958" status="PASS">
+        <test-method signature="TC_SelectCity()[pri:3, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:20:55 IST" name="TC_SelectCity" finished-at="2021-03-26T22:20:56 IST" duration-ms="1594" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_SelectCity -->
-        <test-method signature="TC_ClickHolidayHomes()[pri:4, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:50:33 IST" name="TC_ClickHolidayHomes" finished-at="2021-03-26T21:50:46 IST" duration-ms="13163" status="PASS">
+        <test-method signature="TC_ClickHolidayHomes()[pri:4, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:20:56 IST" name="TC_ClickHolidayHomes" finished-at="2021-03-26T22:21:12 IST" duration-ms="15726" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_ClickHolidayHomes -->
-        <test-method signature="TC_InDate()[pri:5, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:50:46 IST" name="TC_InDate" finished-at="2021-03-26T21:50:49 IST" duration-ms="2606" status="PASS">
+        <test-method signature="TC_InDate()[pri:5, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:21:12 IST" name="TC_InDate" finished-at="2021-03-26T22:21:14 IST" duration-ms="2298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_InDate -->
-        <test-method signature="TC_SelectCheckIn()[pri:6, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:50:49 IST" name="TC_SelectCheckIn" finished-at="2021-03-26T21:50:52 IST" duration-ms="3267" status="PASS">
+        <test-method signature="TC_SelectCheckIn()[pri:6, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:21:14 IST" name="TC_SelectCheckIn" finished-at="2021-03-26T22:21:16 IST" duration-ms="1843" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_SelectCheckIn -->
-        <test-method signature="TC_SelectCheckOut()[pri:7, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:50:52 IST" name="TC_SelectCheckOut" finished-at="2021-03-26T21:50:54 IST" duration-ms="2565" status="PASS">
+        <test-method signature="TC_SelectCheckOut()[pri:7, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:21:16 IST" name="TC_SelectCheckOut" finished-at="2021-03-26T22:21:18 IST" duration-ms="1634" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_SelectCheckOut -->
-        <test-method signature="TC_GuestOption()[pri:8, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:50:54 IST" name="TC_GuestOption" finished-at="2021-03-26T21:51:06 IST" duration-ms="11174" status="PASS">
+        <test-method signature="TC_GuestOption()[pri:8, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:21:18 IST" name="TC_GuestOption" finished-at="2021-03-26T22:21:29 IST" duration-ms="10750" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_GuestOption -->
-        <test-method signature="TC_ClickApply()[pri:9, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:51:06 IST" name="TC_ClickApply" finished-at="2021-03-26T21:51:09 IST" duration-ms="3102" status="PASS">
+        <test-method signature="TC_ClickApply()[pri:9, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:21:29 IST" name="TC_ClickApply" finished-at="2021-03-26T22:21:31 IST" duration-ms="2448" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_ClickApply -->
-        <test-method signature="TC_TravellerRating()[pri:10, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:51:09 IST" name="TC_TravellerRating" finished-at="2021-03-26T21:51:17 IST" duration-ms="8067" status="PASS">
+        <test-method signature="TC_TravellerRating()[pri:10, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:21:31 IST" name="TC_TravellerRating" finished-at="2021-03-26T22:21:39 IST" duration-ms="7725" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_TravellerRating -->
-        <test-method signature="TC_Elevator()[pri:11, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:51:17 IST" name="TC_Elevator" finished-at="2021-03-26T21:51:20 IST" duration-ms="3547" status="PASS">
+        <test-method signature="TC_Elevator()[pri:11, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:21:39 IST" name="TC_Elevator" finished-at="2021-03-26T22:21:41 IST" duration-ms="2655" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_Elevator -->
-        <test-method signature="TC_PrintOutput()[pri:12, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:51:20 IST" name="TC_PrintOutput" finished-at="2021-03-26T21:51:23 IST" duration-ms="2262" status="PASS">
+        <test-method signature="TC_PrintOutput()[pri:12, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:21:41 IST" name="TC_PrintOutput" finished-at="2021-03-26T22:21:42 IST" duration-ms="1025" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_PrintOutput -->
-        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T21:51:44 IST" name="exitBrowser" finished-at="2021-03-26T21:51:48 IST" duration-ms="3930" status="PASS">
+        <test-method is-config="true" signature="exitBrowser()[pri:0, instance:Tests.Test_HolidayHome_Functionality@757acd7b]" started-at="2021-03-26T22:21:57 IST" name="exitBrowser" finished-at="2021-03-26T22:21:59 IST" duration-ms="2028" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- exitBrowser -->
