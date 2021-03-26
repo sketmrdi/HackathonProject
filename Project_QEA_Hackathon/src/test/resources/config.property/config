@@ -1,7 +1,7 @@
 
 //DriverSetup
 
-browser = chrome
+browser = firefox
 
 URL = https://www.tripadvisor.in/
 
