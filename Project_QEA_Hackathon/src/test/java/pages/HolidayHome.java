@@ -1,3 +1,10 @@
+/*This class contains  methods to execute HolidayHome functionality*/
+/*
+ *Project Done By:- 
+ *Team No: 05
+ *Cohort :QEA20QE059
+ */
+
 package pages;
 
 import java.text.SimpleDateFormat;
@@ -28,29 +35,33 @@ public class HolidayHome extends Base{
 	String[] location = new String[4];
 	ExcelData read=new ExcelData();
 
-
+/****************** Enter City in Search field***********************/
 	
 public void enterCity() throws Exception 													
 {	
-	location = read.readExcel("Input");	//Fetching value from excel file	
-	driver.findElement(By.xpath(prop.getProperty("inputField"))).sendKeys(location[1]);//Passing city name to input field 
+	location = read.readExcel("Input");	              //Retrieving city name from excel file	
+	driver.findElement(By.xpath(prop.getProperty("inputField"))).sendKeys(location[1]); //Passing city name to search field 
 	
 		
 		
 	
 	Thread.sleep(1000);			
-	driver.findElement(By.xpath(prop.getProperty("inputField"))).sendKeys(Keys.ENTER);//Confirming value by entering it 		
+	driver.findElement(By.xpath(prop.getProperty("inputField"))).sendKeys(Keys.ENTER);//Click Enter 		
 	
 
 	capture("City entered successfully");	//Taking screenshot
 
 		
 }
-public void verifyCity() throws Exception{	//City verification
+
+/****************** Verify City***********************/
+
+public void verifyCity() throws Exception{	
 	
 	
-	String s = driver.findElement(By.xpath(prop.getProperty("result"))).getText();
-					
+	String s = driver.findElement(By.xpath(prop.getProperty("result"))).getText();   //get cityName text
+	
+	
 	if(location[1].equalsIgnoreCase(s))
 		Logger.log(Status.INFO,"Entered city found successfully...");
 	else
@@ -59,12 +70,14 @@ public void verifyCity() throws Exception{	//City verification
 		System.exit(0);
 	}
 	
-	
 }
-public void selectCity() throws Exception{		//Clicking 1st option from search results
+
+/****************** Click City Name in NextPage***********************/
+
+public void selectCity() throws Exception{		
 	
 	
-	driver.findElement(By.xpath(prop.getProperty("point"))).click();						
+	driver.findElement(By.xpath(prop.getProperty("point"))).click();	//click first city in application					
 	
 	for(String winHandle : driver.getWindowHandles())									
 	{
@@ -72,30 +85,35 @@ public void selectCity() throws Exception{		//Clicking 1st option from search re
 	}
 		
 	Thread.sleep(1000);
-	capture("New window");	//Taking screenshot
+	capture("New window");	//Taking-screenshot
 }
-public void clickHolidayHomes() throws Exception{ //Clicking holiday home option
+
+/****************** Click Holiday Home ***********************/
+
+public void clickHolidayHomes() throws Exception{ 
 	
 	
-	driver.findElement(By.xpath(prop.getProperty("holidayHome"))).click();				
+	driver.findElement(By.xpath(prop.getProperty("holidayHome"))).click();	//clicking "Holiday Home" menu.			
 	
 		
 	Thread.sleep(2000);
-	capture("Holiday home selection");	//Taking screenshot
+	capture("Holiday home selection");	//Taking-screenshot
 	
 		
 }
 
-public void inDate() throws Exception	//Selecting check in date
+/****************** Select Check-In Date ***********************/
+
+public void clickCheckIn() throws Exception	
 {
 	
 		
-	location = read.readExcel("Input");		//Fetching value from excel file
+	location = read.readExcel("Input");		//Retrieving Check-In Date from excel file
 		
 	if((location[2].equals(location[3])) || (location[2].equals(null) || location[3].equals(null) ))//Checking input and output days
 	{
 		Logger.log(Status.FAIL,"Invalid Date Input");
-		System.out.println("Invalid Date Input");	//Error message
+		System.out.println("Invalid Date Input");	//Print Error message
 		System.exit(0);
 	}
 		
@@ -130,8 +148,9 @@ public void inDate() throws Exception	//Selecting check in date
 	
 }
 
+/****************** Select Check-In Date ***********************/
 
-public void selectDateCheckIn() throws Exception		   //Selecting Check-In date
+public void selectCheckInDate() throws Exception		   //Selecting Check-In date
 { 
 	
 	location = read.readExcel("Input");				//Fetching data from excel file
@@ -239,7 +258,11 @@ public void selectDateCheckIn() throws Exception		   //Selecting Check-In date
 			
 		}
 
-	public void selectDateCheckOut() throws Exception		//Selecting Check-Out date
+
+
+/****************** Select Check-out Date ***********************/
+
+	public void selectCheckOutDate() throws Exception		
 	{ 	
 		
 		
@@ -319,13 +342,14 @@ public void selectDateCheckIn() throws Exception		   //Selecting Check-In date
 		}			
 
 
+/****************** Select Guest Count ***********************/
 	
-public void guestOption() throws Exception 							//Selecting guest Option
+public void guestOption() throws Exception 							
 	{
 	
 
 	try {
-		driver.findElement(By.xpath("//button[@class='_3VKU_-kL']")).click();
+		driver.findElement(By.xpath("//button[@class='_3VKU_-kL']")).click(); //click guest button
 		
 		
 	}
@@ -357,32 +381,39 @@ public void guestOption() throws Exception 							//Selecting guest Option
 		}
 		
 }
-public void clickApply() throws Exception{								//Clicking on apply
+
+/****************** Click Guest Apply Button***********************/
+
+public void clickApply() throws Exception{							
 	
 	
-		driver.findElement(By.xpath(prop.getProperty("apply"))).click();		
+		driver.findElement(By.xpath(prop.getProperty("apply"))).click();			//Clicking on apply
 		
 		Thread.sleep(2000);
 		capture("Guests selected");	//Taking screenshot
 		
 }
 
-public void travellerRating() throws Exception 							//Selecting Sort By option
+/****************** Select Traveller Rating Sort Option***********************/
+
+public void travellerRating() throws Exception 							
 	{
-		Thread.sleep(1000);
-		driver.findElement(By.xpath(prop.getProperty("options"))).click();		
+		Thread.sleep(2000);
+		driver.findElement(By.xpath(prop.getProperty("options"))).click();		//Selecting Sort By option
 		
 		Thread.sleep(1000);
-		driver.findElement(By.xpath(prop.getProperty("rating"))).click();	//Selecting Traveller  rating option
+		driver.findElement(By.xpath(prop.getProperty("rating"))).click();	//Selecting Traveller-rating option
 		
 		Thread.sleep(2000);
-		capture("Traveller rating selected") ;	//Taking screenshot
+		capture("Traveller rating selected") ;	//Taking-screenshot
 	}
 
-public void elevatorOption() throws Exception{								//Clicking show more option in Amenities
+/****************** Select Elevator Option in Amenities***********************/
+
+public void elevatorOption() throws Exception{								
 		
 		
-		driver.findElement(By.xpath(prop.getProperty("showMore"))).click();		
+		driver.findElement(By.xpath(prop.getProperty("showMore"))).click();		//Clicking "show more" option in Amenities
 		
 		Thread.sleep(1000);
 
@@ -390,13 +421,13 @@ public void elevatorOption() throws Exception{								//Clicking show more optio
 		
 		
 		Thread.sleep(1000);
-		capture("Elevator selected");	//Taking screenshot
+		capture("Elevator selected");	//Taking-screenshot
 		
 	}
 
+/****************** Print Holiday Home details console & Write to excel file***********************/
 
-
-public void printOutput() throws Exception									//Transferring data to excel sheet
+public void printOutput() throws Exception									
 	{
 		
 		
@@ -415,24 +446,29 @@ public void printOutput() throws Exception									//Transferring data to excel 
 		for (int i = 0; i < 3; i++) 
 		{
 			name[i] = titles.get(i).getText();	//Transferring values to arrays	
-			System.out.println(name[i]);
+			System.out.println(name[i]);         //print hotel name to concole
 			price1[i] = price.get(i).getText();																//Transferring values to arrays
-			System.out.println(price1[i]);
-			totalPrice[i] = total.get(i).getText();															//Transferring values to arrays
-			System.out.println(totalPrice[i]);
+			System.out.println(price1[i]);       //print price per day to console
+			totalPrice[i] = total.get(i).getText();		 													//Transferring values to arrays
+			System.out.println(totalPrice[i]);      //print 5day price to console
 		}
 
-	ExcelData.writeExcel(name, price1, totalPrice);													//Passing values to excel sheet
+	ExcelData.writeExcel(name, price1, totalPrice);												//Transferring data to excel sheet
 	
 
 	}
 
-public void NegOne() throws InterruptedException {	//Check if site indicates there is a blank field
+/****************************************Negative Test Cases for HolidayHome**************************************/
+
+
+/****************** Blank Search***********************/
+
+public void BlankSearch() throws InterruptedException {	
 	
 	driver.navigate().to(prop.getProperty("url"));
 	Thread.sleep(2000);
 	
-	driver.findElement(By.xpath(prop.getProperty("findHolidayRentals"))).click();
+	driver.findElement(By.xpath(prop.getProperty("findHolidayRentals"))).click(); //click search button by leaving search textbox empty
 	Thread.sleep(2000);
 	
 
@@ -442,13 +478,15 @@ public void NegOne() throws InterruptedException {	//Check if site indicates the
 	if (hex.equals("#cc0000"))
 		System.out.println("Please enter valid value");
 	
-	capture("Blank field check");
+	capture("Blank field check");  //Taking-screenshot
 }
 
-public void NegTwo(String str) throws Exception {
+/****************** Invalid City Search***********************/
+
+public void InvalidCity(String str) throws Exception {
 	
 
-	driver.findElement(By.xpath(prop.getProperty("city"))).sendKeys(str);	//Entering invalid place name
+	driver.findElement(By.xpath(prop.getProperty("city"))).sendKeys(str);	//Entering invalid city name
 	Thread.sleep(1000);
 	driver.findElement(By.xpath(prop.getProperty("findHolidayRentals"))).click();
 	
@@ -459,10 +497,12 @@ public void NegTwo(String str) throws Exception {
 	String expectedMessage="Sorry, we couldn't find \"jhcfdfjfythfgft\" worldwide";
 	Assert.assertEquals(actualMessage, expectedMessage);//Verify error message
 	
-	capture("Invalid place");
+	capture("Invalid place"); //Taking-screenshot
 }
 
-public void NegThree(String str1) throws Exception {
+/****************** Enter Invalid Date***********************/
+
+public void InvalidDates(String str1) throws Exception {
 	
 	driver.navigate().to(prop.getProperty("url"));
 	
@@ -470,15 +510,15 @@ public void NegThree(String str1) throws Exception {
 	driver.findElement(By.xpath(prop.getProperty("cal"))).click();
 	WebDriverWait wait2 = new WebDriverWait(driver, 40);
 	wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("date1"))));
-	driver.findElement(By.xpath(prop.getProperty("date1"))).click(); //Selecting a check-in date
+	driver.findElement(By.xpath(prop.getProperty("date1"))).click(); //click check-in date
 	
 	WebDriverWait wait3 = new WebDriverWait(driver, 40);
 	wait3.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(prop.getProperty("date2"))));
 	
-	driver.findElement(By.xpath(prop.getProperty("date2"))).click();   //Selecting a check-out date less than check-in date
+	driver.findElement(By.xpath(prop.getProperty("date2"))).click();   //click check-out date
 	Thread.sleep(1000);
-	if (driver.findElement(By.xpath(prop.getProperty("calenderDisp"))).isDisplayed())//Checking if check-out date is less than check-in date
-		System.out.println("Enter valid Check out date");
+	if (driver.findElement(By.xpath(prop.getProperty("calenderDisp"))).isDisplayed())
+		System.out.println("Enter valid date in Date Field");
 
 	capture("Dates check");
 }

@@ -1,3 +1,10 @@
+/*This class contains basic methods for selecting webdriver, opening url, screenshot & quiting browser*/
+/*
+ *Project Done By:- 
+ *Team No: 05
+ *Cohort :QEA20QE059
+ */
+
 package BaseClass;
 
 import java.io.File;
@@ -33,32 +40,30 @@ public class Base {
 	public static ExtentTest Logger;
 	public static String browse;
 	public static String homePage;
-	/*
-	 * Creating constructor to initialize properties file
-	 */
 	
+	
+	/****************** Base() constructor to initialize property file***********************/
 	public Base() {
 
 		try 
 		{
-		FileInputStream file = new FileInputStream(".\\src\\test\\resources\\config.property\\config"); 	//Property file location
-		prop.load(file); 					//Loading property file
+		FileInputStream file = new FileInputStream(".\\src\\test\\resources\\config.property\\config");  //initializing property file path
+		prop.load(file); 	     //Loading config.property file
 		} 
 	catch (Exception e)
 		{
-			e.printStackTrace();			//Printing actual error message
+			e.printStackTrace();  //Printing error message
 		}
 	}
 	
 
 
-	/*
-	 * Method to open browser
-	 */
+	/****************** Invoke Browser ***********************/
+	
 	public static WebDriver getDriver() {
 		
-		String browser = prop.getProperty("browser");
-		System.out.println("Browser selected: " + browser);
+		String browser = prop.getProperty("browser"); //get browser name from property file
+		System.out.println("Browser selected: " + browser); //display selected browser in console
 		browse=browser;
 		
 		switch (browser.toLowerCase()) {
@@ -113,7 +118,7 @@ public class Base {
 	}
 	
 	
-	/*Open Url*/
+	/****************** Open URL in Browser ***********************/
 	
 	public void openUrl() {
 		String url = prop.getProperty("URL");
@@ -122,19 +127,23 @@ public class Base {
 		
 	}
 
+	
+	/****************** Wait functionality ***********************/
+	
 	public void waitElementClickable(String elementXpath) {
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
 	}
 
-	/* Take Screenshot*/
-	 
+	
+	/****************** Take Screenshot ***********************/
+	
 	public String capture(String fileName) {
 
-		// Creating a screenshot driver and storing in scrFile temporarily.
+		// Creating a screenshot driver and storing in "scrFile" temporarily.
 		File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-		//store screenshots in the destination
+		//store screenshots in the destinations
 		try {
 			FileUtils.copyFile(scrFile, new File(".\\src\\test\\resources\\Screenshots\\" + fileName + ".png"));
 		} catch (IOException e) {
@@ -147,12 +156,12 @@ public class Base {
 	
 
 
-	/* Closing browser*/
-	 
+	/****************** Close Browser ***********************/
+	
 	public void quitBrowser() {
-		reports.flush();
+		reports.flush(); 
 		System.out.println("Exiting the application and closing the browser");
 		
-		driver.quit();
+		driver.quit(); //closing browser
 	}
 }

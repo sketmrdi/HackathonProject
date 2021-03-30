@@ -1,3 +1,13 @@
+/*This class contains TestCases for Cruise functionality */
+
+/*
+ *Project Done By:- 
+ *Team No: 05
+ *Cohort :QEA20QE059
+ */
+
+
+
 package Tests;
 
 import pages.Cruises;
@@ -22,7 +32,7 @@ public void TC_InitiateCruise() {
 }
 
 @Test(priority=13)
-public void TC_ClickCruise() throws Exception {
+public void TC_ClickCruise() throws Exception {								//TestCase for clicking cruise Button
 	Logger = reports.createTest("Cruise Option Verification");
 	Logger.assignCategory("Functional Testing");
 	
@@ -34,7 +44,7 @@ public void TC_ClickCruise() throws Exception {
 }
 
 @Test(priority=14)
-public void TC_CruiseType() throws Exception {
+public void TC_CruiseType() throws Exception {								//TestCase for selecting cruiseType
 	Logger = reports.createTest("Cruise Type Selection Functionality");
 	Logger.assignCategory("Functional Testing");
 	
@@ -47,7 +57,7 @@ public void TC_CruiseType() throws Exception {
 }
 
 @Test(priority=15)
-public void TC_SelectCruiseVar() throws Exception{
+public void TC_SelectCruiseVar() throws Exception{						//TestCase for selecting cruiseVarient
 	Logger = reports.createTest("Cruise Type Variant Functionality");
 	Logger.assignCategory("Functional Testing");
 	
@@ -61,7 +71,7 @@ public void TC_SelectCruiseVar() throws Exception{
 }
 
 @Test(priority=16)
-public void TC_ClickSub() throws Exception {
+public void TC_ClickSub() throws Exception {							//TestCase for clicking Search button
 	Logger = reports.createTest("Cruise Search Button Functionality");
 	Logger.assignCategory("Regression Testing");
 
@@ -76,7 +86,7 @@ public void TC_ClickSub() throws Exception {
 }
 
 @Test(priority=17)
-public void TC_GetDetails() throws Exception{
+public void TC_GetDetails() throws Exception{							//TestCase for fetching cruise details
 	Logger = reports.createTest("Cruise Output data transfer Functionality");
 	
 	cruise.getDetails();

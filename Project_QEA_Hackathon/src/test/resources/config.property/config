@@ -1,26 +1,26 @@
-
-//DriverSetup
+/* DriverSetup */
 
 browser = firefox
 
 URL = https://www.tripadvisor.in/
 
+/*XPaths*/
 
+/*Holiday Home Xpaths*/
 
 //SelectCity
-
 inputField = //input[@placeholder='Where to?']
 
 result = //div[@class='result-title']/span[text()='Nairobi']
 
-point = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[3]/div/div[1]/div/div[2]/div/div/div/div/div/div/div[2]/div[1]
+point = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[3]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[3]/div/div[1]/div/div[2]/div/div/div/div/div/div/div[2]/div[1]/div[1]/span
 
 //holidayHome = //a[@title='Holiday Homes']
 
 holidayHome = //*[@id="lithium-root"]/main/div[2]/div/div/div[2]/a
 
 
-//inDate
+//CheckInDate-Click
 
 checkIn = //div[@class='lRYY2wxe']//div[text()='Check-in']
 
@@ -39,14 +39,14 @@ arrowRight = //div[@data-testid='nav_next']
 
 guest = //div[text()='Guests']
 
-plusIcon = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[14]/div/div/div[2]/div/div[2]/div/div[2]/span[2]/span
+plusIcon = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[15]/div/div/div[2]/div/div[2]/div/div[2]/span[2]/span
 
-minusIcon = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[14]/div/div/div[2]/div/div[2]/div/div[2]/span[1]/span
+minusIcon = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[15]/div/div/div[2]/div/div[2]/div/div[2]/span[1]/span
 
 apply = //button[text()='Apply']
 
 
-//Extras
+//TRating, Evevalor
 
 options = //*[@id="component_2"]/div/div[3]/div/div[1]/div[2]/div[1]/div[2]/div/div/div/div[1]
 
@@ -57,7 +57,7 @@ showMore = //*[@id="component_2"]/div/div[3]/div/div[1]/div[1]/div[1]/div/div/di
 elev = //span[@class='_1TxySsqs']/div[contains(text(),'Elevator')]
 
 
-//Output
+//Holiday Home Output
 
 //listOfHotels = //div[@class='_2eG0wTfl']/a
 listOfHotels = //div[@class='_2eG0wTfl']/h2/a
@@ -66,20 +66,21 @@ listOfPricePerNight = //div[@class='_33TIi_t4']
 
 listOfTotalPrice = //div[@class='_3f9mHAKH']
 
-//negOne
+/*Negative testCases Xpaths*/
+
+//Blanksearch
 url= https://www.tripadvisor.in/Rentals
 
 findHolidayRentals= //*[@id="SUBMIT_VACATION_RENTALS"]/span[2]
 
 colour=//*[@id="taplc_trip_search_home_vacation_rentals_0"]/div[2]/div[1]/div/span/span
 
-//negTwo
+//InvalidCity
       
 city=//*[@id="taplc_trip_search_home_vacation_rentals_0"]/div[2]/div[1]/div/span/input
        
-errorMsg=//*[@id=\"BODY_BLOCK_JQUERY_REFLOW\"]/div[2]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[3]/div/div/div[1]/span
-
-//negThree
+errorMsg = //*[@id="BODY_BLOCK_JQUERY_REFLOW"]/div[3]/div/div[2]/div/div/div/div/div[1]/div/div[1]/div/div[3]/div/div/div[1]/span
+//Invalid city search
 
 cal=//*[@id="taplc_trip_search_home_vacation_rentals_0"]/div[2]/div[2]/div/span[1]/span[2]/span
 

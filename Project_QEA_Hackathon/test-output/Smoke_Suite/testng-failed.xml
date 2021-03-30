@@ -5,7 +5,7 @@
     <classes>
       <class name="Tests.Test_HolidayHome_Functionality">
         <methods>
-          <include name="TC_TravellerRating"/>
+          <include name="TC_GuestOption"/>
           <include name="startTest"/>
           <include name="exitBrowser"/>
           <include name="TC_InitiateHolidayHomes"/>

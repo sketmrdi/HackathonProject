@@ -1,3 +1,10 @@
+/*This class contains basic methods for Excel read and write operations*/
+/*
+ *Project Done By:- 
+ *Team No: 05
+ *Cohort :QEA20QE059
+ */
+
 package utilities;
 
 import java.io.File;
@@ -22,27 +29,31 @@ public class ExcelData extends Base{
 	public static FileOutputStream fout;
 	static XSSFRow row = null;
 
-	public String[] readExcel(String sheetName) throws Exception			//Reading data from excel sheet
+	/****************** Read Excel Data ***********************/
+	
+	public String[] readExcel(String sheetName) throws Exception			
 	{
 		file = new File(path);
 		fin = new FileInputStream(file);
 		wb = new XSSFWorkbook(fin);
 		sh = wb.getSheet(sheetName);
 		String[] s = new String[4];
-		double n = sh.getRow(1).getCell(0).getNumericCellValue();				//Fetching numeric values from excel
+		double n = sh.getRow(1).getCell(0).getNumericCellValue();				//Fetching "members" numeric values from excel
 		int m = (int)n;															//Converting numeric value to integer format
 		s[0] = Integer.toString(m);												//Converting numeric value to string format
-		s[1] = sh.getRow(1).getCell(1).getStringCellValue();					//Fetching string values from excel
-		s[2] = String.valueOf(sh.getRow(1).getCell(2).getDateCellValue());		//Fetching date format values from excel
-		s[3] = String.valueOf(sh.getRow(1).getCell(3).getDateCellValue());		//Fetching date format values from excel
+		s[1] = sh.getRow(1).getCell(1).getStringCellValue();					//Fetching "cityName" string values from excel
+		s[2] = String.valueOf(sh.getRow(1).getCell(2).getDateCellValue());		//Fetching "Check-In" date value from excel
+		s[3] = String.valueOf(sh.getRow(1).getCell(3).getDateCellValue());		//Fetching "Check-out" date value from excel
 		 
 		 return s;																//Returning string array of values
 	}
 
-	public static void writeExcel(String[] name,String[] price1,String[] totalPrice) throws Exception 	//Passing values to excel sheet to save it
+	/****************** Write HolidayHome details to Excel ***********************/
+	
+	public static void writeExcel(String[] name,String[] price1,String[] totalPrice) throws Exception
 	{
 
-		String path1 = "./src/test/resources/ExcelData/Output.xlsx";						//Fetching excel file from directory
+		String path1 = "./src/test/resources/ExcelData/Output.xlsx";						//Fetching excel file from 
 		file = new File(path1);
 		fin = new FileInputStream(file);
 		wb = new XSSFWorkbook(fin);
@@ -53,7 +64,7 @@ public class ExcelData extends Base{
 		else if(browse.equalsIgnoreCase("ie"))
 			sh = wb.getSheet("IE-Output");
 		
-		for (int i = 0; i < 3; i++)										//Loop for storing manual input values to excel
+		for (int i = 0; i < 3; i++)										//for loop for storing manual input values to excel
 		{
 			row = sh.createRow(i);
 			row.createCell(0).setCellValue("Holiday Homes");			//Manual value stored in excel
@@ -76,6 +87,8 @@ public class ExcelData extends Base{
 		fout.close();													//Closing the excel sheet
 		
 	}
+	
+	/****************** Write Cruise details to Excel ***********************/
 	public static void writeExcelCruise(String[] list,String launched,String[] lang) throws Exception 
 	{
 

@@ -1,9 +1,12 @@
-package utilities;
-/**
- * This class is defined to generate ExtentReports for the testcases
- * @author Coding Titans
- * Date:01/12/2020 
+/*This class contains methods to generate ExtentReports for the testcases */
+/*
+ *Project Done By:- 
+ *Team No: 05
+ *Cohort :QEA20QE059
  */
+
+package utilities;
+
 import java.util.Date;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -17,17 +20,12 @@ public class ExtentReport {
 	public static ExtentHtmlReporter htmlReporter;
 	public static Date currentDate=new Date();
 	
+	/****************** Generate Report ***********************/
+	
 	public static ExtentReports getReportInstance() {
-		System.out.println("Report started");
-	reports = new ExtentReports();								//Creating extent report object
-		/*
-		 * if(Base.browse.equalsIgnoreCase("chrome")) { htmlReporter = new
-		 * ExtentHtmlReporter(System.getProperty("user.dir")+
-		 * "//test-output//ExtentReport_Chrome.html"); } else
-		 * if(Base.browse.equalsIgnoreCase("firefox")) { htmlReporter = new
-		 * ExtentHtmlReporter(System.getProperty("user.dir")+
-		 * "//test-output//ExtentReport_Firefox.html"); }
-		 */
+		System.out.println("Report started");           //print  to console
+	reports = new ExtentReports();						//Creating extent report object
+		
 	htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"//test-output//ExtentReport.html");	//Fetching file from directory
 	System.out.println(htmlReporter);
 	reports.attachReporter(htmlReporter);						//attaching report object to existing html file
@@ -40,8 +38,8 @@ public class ExtentReport {
 	
 	// Set the htmlReporter properties
 	 htmlReporter.config().setChartVisibilityOnOpen(true);
-	htmlReporter.config().setDocumentTitle("Calculate Trip Cost");
-	htmlReporter.config().setReportName("Automation Test Report");
+	htmlReporter.config().setDocumentTitle("Calculate Trip Cost");  //Set Report Document Title
+	htmlReporter.config().setReportName("Automation Test Report");  //Set Report Name
 	htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 	htmlReporter.config().setTimeStampFormat("MMM dd, yyyy HH:mm:ss");
 	System.out.println("Report started");

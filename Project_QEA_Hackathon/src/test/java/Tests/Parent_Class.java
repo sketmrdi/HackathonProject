@@ -1,7 +1,15 @@
+/*This class implement call driver instantiation */
+
+/*
+ *Project Done By:- 
+ *Team No: 05
+ *Cohort :QEA20QE059
+ */
+
+
 package Tests;
 
 
-//import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -20,23 +28,26 @@ public class Parent_Class extends Base{
 	
 	public static ExtentReports report;
 	public static WebDriver driver;
+
 	
-	
+	/**Driver Installation***/
 	@BeforeSuite	
-	public void startTest()			//driver instantiate								
+	public void startTest()											
 	{
-		//BasicConfigurator.configure();
+	
 		driver=getDriver();	
 		
-		openUrl();
+		openUrl();                 //open URL in selected browser
 		
 	}
 	
+	
+	/****Exit Driver***/
 	@AfterSuite
-	public void exitBrowser()	//exit driver
+	public void exitBrowser()	
 	{
 		
-		quitBrowser();
+		quitBrowser();             //closing browser
 	}
 
 }

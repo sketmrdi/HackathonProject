@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Smoke_Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Smoke_Test(failed)">
+<suite name="Failed suite [Regression_Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Regresion_Test(failed)">
     <classes>
-      <class name="Tests.Test_HolidayHome_Functionality">
+      <class name="Tests.Test_InvalidHolidayHomes_Functionality">
         <methods>
-          <include name="TC_TravellerRating"/>
+          <include name="TC_InitiateInvalidHolidayHomes"/>
           <include name="startTest"/>
+          <include name="TC_InvalidCity"/>
           <include name="exitBrowser"/>
-          <include name="TC_InitiateHolidayHomes"/>
         </methods>
-      </class> <!-- Tests.Test_HolidayHome_Functionality -->
+      </class> <!-- Tests.Test_InvalidHolidayHomes_Functionality -->
     </classes>
-  </test> <!-- Smoke_Test(failed) -->
-</suite> <!-- Failed suite [Smoke_Suite] -->
+  </test> <!-- Regresion_Test(failed) -->
+</suite> <!-- Failed suite [Regression_Suite] -->

@@ -1,3 +1,11 @@
+/*This class contains  TestCases for HolidayHome functionality */
+
+/*
+ *Project Done By:- 
+ *Team No: 05
+ *Cohort :QEA20QE059
+ */
+
 package Tests;
 
 import pages.HolidayHome;
@@ -23,9 +31,8 @@ public void TC_InitiateHolidayHomes() {
 	
 
 @Test(priority=1)
-public void TC_EnterCity() throws Exception {
+public void TC_EnterCity() throws Exception {                     //TestCase for entering cityName
 	Logger = reports.createTest("City Input Test Function");
-	Logger.assignCategory("Smoke Testing");
 	
 	home.enterCity();
 	
@@ -36,14 +43,14 @@ public void TC_EnterCity() throws Exception {
 }
 
 @Test(priority=2)
-public void TC_VerifyCity() throws Exception {
+public void TC_VerifyCity() throws Exception {						 //TestCase for verifying cityName
 	Logger = reports.createTest("City Verification");
 	
 	home.verifyCity();
 }
 
 @Test(priority=3)
-public void TC_SelectCity() throws Exception{
+public void TC_SelectCity() throws Exception{						 //TestCase for selecting city from application
 	Logger=reports.createTest("Select City Verification");
 	
 	home.selectCity();
@@ -55,7 +62,7 @@ public void TC_SelectCity() throws Exception{
 }
 
 @Test(priority=4)
-public void TC_ClickHolidayHomes() throws Exception {
+public void TC_ClickHolidayHomes() throws Exception {					 //TestCase for entering HolidayHome button
 	Logger=reports.createTest("Holiday Home verification");
 	Thread.sleep(2000);
 	home.clickHolidayHomes();
@@ -65,30 +72,28 @@ public void TC_ClickHolidayHomes() throws Exception {
 }
 
 @Test(priority=5)
-public void TC_InDate() throws Exception {
+public void TC_InDate() throws Exception {								 //TestCase for clicking check-In Date
 	Logger = reports.createTest("In-Date Verification");
-	Logger.assignCategory("Sanity Testing");
 	
-	home.inDate();
+	home.clickCheckIn();
 	
 	Logger.log(Status.INFO,"CheckIn-Date option selected...");
 }
 
 @Test(priority=6)
-public void TC_SelectCheckIn() throws Exception{
+public void TC_SelectCheckIn() throws Exception{						 //TestCase for selecting checkInDate
 	Logger=reports.createTest("Check In Date Verification");
 	
-	home.selectDateCheckIn();
+	home.selectCheckInDate();
 	
 	Logger.log(Status.PASS, MarkupHelper.createLabel("CheckIn-Date Verification Successfull", ExtentColor.BLUE));
 }
 
 @Test(priority=7)
-public void TC_SelectCheckOut() throws Exception {
+public void TC_SelectCheckOut() throws Exception {						//TestCase for selecting checkOutDate
 	Logger = reports.createTest("CheckOut-Date Verification");
-	Logger.assignCategory("Sanity Testing");
 	
-	home.selectDateCheckOut();
+	home.selectCheckOutDate();
 	
 	Logger.log(Status.PASS, MarkupHelper.createLabel("CheckOut-Date Verification Successfull", ExtentColor.BLUE));
 	
@@ -97,9 +102,8 @@ public void TC_SelectCheckOut() throws Exception {
 
 
 @Test(priority=8)
-public void TC_GuestOption() throws Exception {
+public void TC_GuestOption() throws Exception {							//TestCase for selecting GuestCount
 	Logger = reports.createTest("Guest Verification");
-	Logger.assignCategory("Regression Testing");
 	
 	
 	home.guestOption();
@@ -111,7 +115,7 @@ public void TC_GuestOption() throws Exception {
 
 
 @Test(priority=9)
-public void TC_ClickApply() throws Exception {
+public void TC_ClickApply() throws Exception {							//TestCase for ckicking "Apply" button
 	Logger=reports.createTest("Apply button verification");
 	
 	home.clickApply();
@@ -121,9 +125,8 @@ public void TC_ClickApply() throws Exception {
 }
 
 @Test(priority=10)
-public void TC_TravellerRating() throws Exception {
+public void TC_TravellerRating() throws Exception {							//TestCase for selecting Traveller rating option
 	Logger = reports.createTest("Traveller Rating Functionality");
-	Logger.assignCategory("Functional Testing");
 	
 	Thread.sleep(2000);
 	
@@ -137,9 +140,8 @@ public void TC_TravellerRating() throws Exception {
 
 
 @Test(priority=11)
-public void TC_Elevator() throws Exception {
+public void TC_Elevator() throws Exception {										//TestCase for selecting "Elevator" option
 	Logger = reports.createTest("Elevator Testing Functionality");
-	Logger.assignCategory("Functional Testing");
 	
 	home.elevatorOption();
 	
@@ -149,7 +151,7 @@ public void TC_Elevator() throws Exception {
 }
 
 @Test(priority=12)
-public void TC_PrintOutput() throws Exception {
+public void TC_PrintOutput() throws Exception {									//TestCase for Fetching HolidayHome details
 	Logger = reports.createTest("Output data transfer Functionality");
 	
 	home.printOutput();
